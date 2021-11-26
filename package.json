@@ -9,8 +9,8 @@
     "clean": "rm -rf lib",
     "prepare": "npm run build",
     "format": "prettier --write \"src/**/*.ts\"",
-    "postinstall": "npm run build && node ./lib/scripts/postinstall.js",
-    "copy-assets": "node scripts/copy-assets.js"
+    "postinstall": "node ./lib/scripts/postinstall.js",
+    "copy-assets": "cp ./src/scripts/ ./dist/"
   },
   "author": "",
   "license": "MIT",
