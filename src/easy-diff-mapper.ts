@@ -1,7 +1,7 @@
 import { ChangeType } from './change-type.enum';
 import { Options } from './options';
 export class EasyDiffMapper {
-  public async getDiffs(originalObject: any, newObject: any, options: Options): Promise<any> {
+  public async compare(originalObject: any, newObject: any, options: Options): Promise<any> {
     return this.deepDiffMapper.map(originalObject, newObject, options);
   }
 

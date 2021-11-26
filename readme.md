@@ -76,7 +76,7 @@ copyObj1.department.name = 'Finances';
 
 // Let's compare both objects
 const edf = new EasyDiffMapper();
-const diff = await edf.getDiffs(obj1, copyObj1, {
+const diff = await edf.compare(obj1, copyObj1, {
   excludeUnchanged: false,
 });
 
@@ -190,7 +190,7 @@ EasyDiffMapper used as a instanced class provide the following methods.
 
 ```typescript
 const diff = new EasyDiffMapper();
-await diff.getDiffs(obj1, obj2, options);
+await diff.compare(obj1, obj2, options);
 ```
 
 ## Stay in touch
