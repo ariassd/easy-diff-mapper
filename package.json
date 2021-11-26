@@ -10,12 +10,13 @@
     "prepare": "npm run build",
     "format": "prettier --write \"src/**/*.ts\"",
     "postinstall": "node ./lib/scripts/postinstall.js",
-    "copy-assets": "cp ./src/scripts/ ./dist/"
+    "copy-assets": "copyfiles -u 1 src/scripts/* lib"
   },
   "author": "",
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {
+    "copyfiles": "^2.4.1",
     "ts-node": "^10.4.0",
     "typescript": "^4.5.2"
   },
