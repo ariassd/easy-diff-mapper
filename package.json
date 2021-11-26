@@ -1,0 +1,35 @@
+{
+  "name": "easy-diff-mapper",
+  "version": "1.0.0",
+  "description": "This package allows to compare two JSON objects and return a summary of changes",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "build": "tsc && npm run copy-assets",
+    "clean": "rm -rf lib",
+    "prepare": "npm run build",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "postinstall": "npm run build && node ./lib/scripts/postinstall.js",
+    "copy-assets": "node scripts/copy-assets.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ariassd/easy-diff-mapper.git"
+  },
+  "keywords": [
+    "diff",
+    "json",
+    "mapper",
+    "comparer"
+  ],
+  "files": [
+    "lib/**/*"
+  ]
+}
