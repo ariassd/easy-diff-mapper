@@ -1,13 +1,8 @@
 import { ChangeType } from './change-type.enum';
 import { Options } from './options';
 export class EasyDiffMapper {
-  public async getDiffs(
-    originalObject: any,
-    newObject: any,
-    options: Options,
-  ): Promise<any> {
+  public async getDiffs(originalObject: any, newObject: any, options: Options): Promise<any> {
     return this.deepDiffMapper.map(originalObject, newObject, options);
-    // return this.deepDiffMapper2.map(originalObject, newObject, options);
   }
 
   private deepDiffMapper = (function () {
@@ -18,7 +13,7 @@ export class EasyDiffMapper {
         }
         if (this.isValue(obj1) || this.isValue(obj2)) {
           return {
-            type: this.compareValues(obj1, obj2),
+            changeType: this.compareValues(obj1, obj2),
             old: obj1,
             new: obj2,
           };
@@ -33,18 +28,12 @@ export class EasyDiffMapper {
             value2 = obj2[key];
           }
           const change = this.map(obj1[key], value2, options);
-          if (
-            !options.excludeUnchanged ||
-            change.type !== ChangeType.Unchanged
-          ) {
+          if (!options.excludeUnchanged || change.type !== ChangeType.Unchanged) {
             diff[key] = change;
           }
         }
         for (var key in obj2) {
-          if (
-            this.isFunction(obj2[key]) ||
-            diff[key] !== ChangeType.Unchanged
-          ) {
+          if (this.isFunction(obj2[key]) || diff[key] !== ChangeType.Unchanged) {
             continue;
           }
           const change = this.map(undefined, obj2[key], options);
@@ -58,11 +47,7 @@ export class EasyDiffMapper {
         if (value1 === value2) {
           return ChangeType.Unchanged;
         }
-        if (
-          this.isDate(value1) &&
-          this.isDate(value2) &&
-          value1.getTime() === value2.getTime()
-        ) {
+        if (this.isDate(value1) && this.isDate(value2) && value1.getTime() === value2.getTime()) {
           return ChangeType.Unchanged;
         }
         if (value1 === undefined) {

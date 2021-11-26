@@ -88,50 +88,50 @@ _Result json_
 ```json
 {
   "name": {
-    "type": "Unchanged",
+    "changeType": "Unchanged",
     "old": "Ed Edwards",
     "new": "Ed Edwards"
   },
   "address": {
-    "type": "Updated",
+    "changeType": "Updated",
     "old": "St 10, Av 10, Building 1023",
     "new": "St 10, Av 33, Building 1023"
   },
   "country": {
-    "type": "Deleted",
+    "changeType": "Deleted",
     "old": "Costa Rica"
   },
   "contactData": {
     "0": {
       "type": {
-        "type": "Unchanged",
+        "changeType": "Unchanged",
         "old": "email",
         "new": "email"
       },
       "description": {
-        "type": "Unchanged",
+        "changeType": "Unchanged",
         "old": "personal",
         "new": "personal"
       },
       "contact": {
-        "type": "Unchanged",
+        "changeType": "Unchanged",
         "old": "eedwards@gmail.com",
         "new": "eedwards@gmail.com"
       }
     },
     "1": {
       "type": {
-        "type": "Updated",
+        "changeType": "Updated",
         "old": "email",
         "new": "phone"
       },
       "description": {
-        "type": "Updated",
+        "changeType": "Updated",
         "old": "work",
         "new": "personal"
       },
       "contact": {
-        "type": "Updated",
+        "changeType": "Updated",
         "old": "eedwards@coolcompany.com",
         "new": "+(506)8978675645"
       }
@@ -139,34 +139,34 @@ _Result json_
   },
   "pendingTasks": {
     "0": {
-      "type": "Unchanged",
+      "changeType": "Unchanged",
       "old": "Prepare invoice payments",
       "new": "Prepare invoice payments"
     },
     "1": {
-      "type": "Unchanged",
+      "changeType": "Unchanged",
       "old": "Update excel payroll information",
       "new": "Update excel payroll information"
     },
     "2": {
-      "type": "Deleted",
+      "changeType": "Deleted",
       "old": "Make a deposit for payroll"
     }
   },
   "department": {
     "name": {
-      "type": "Updated",
+      "changeType": "Updated",
       "old": "finances",
       "new": "Finances"
     },
     "offices": {
       "0": {
-        "type": "Unchanged",
+        "changeType": "Unchanged",
         "old": "408 4th floor, finances main office",
         "new": "408 4th floor, finances main office"
       },
       "1": {
-        "type": "Updated",
+        "changeType": "Updated",
         "old": "103 1st floor, finances reception",
         "new": "103 1st floor, finances reception 👈 here is the money 🤫"
       }
