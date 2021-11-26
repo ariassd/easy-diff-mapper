@@ -8,9 +8,7 @@
     "build": "tsc && npm run copy-assets",
     "clean": "rm -rf lib",
     "prepare": "npm run build",
-    "format": "prettier --write \"src/**/*.ts\"",
-    "postinstall": "node ./lib/scripts/postinstall.js",
-    "copy-assets": "copyfiles -u 1 src/scripts/* lib"
+    "format": "prettier --write \"src/**/*.ts\""
   },
   "author": "",
   "license": "MIT",
